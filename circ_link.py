@@ -20,6 +20,7 @@ class crcllnk:
             self.head.prv.nxt=new
             self.head.prv=new
             self.head=new
+        print("Done!")
 
     def addend(self,data):
         new=node(data)
@@ -32,6 +33,7 @@ class crcllnk:
             new.nxt=self.head
             self.head.prv.nxt=new
             self.head.prv=new
+        print("Done!")
 
     def disp(self):
         temp=self.head
@@ -58,7 +60,6 @@ class crcllnk:
 
     def delete(self,val):
         temp=self.head
-        dup=0
         while True:
             if temp.data==val:
                 temp.nxt.prv=temp.prv
@@ -68,6 +69,7 @@ class crcllnk:
             elif temp.nxt==self.head:
                 break
             temp=temp.nxt
+        print("Done!")
 
 if __name__ == "__main__":
     linked_list = crcllnk()
